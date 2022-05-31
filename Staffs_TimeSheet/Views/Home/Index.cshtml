@@ -1,0 +1,130 @@
+﻿@model Staffs_TimeSheet.Models.Login
+@{ ViewData["Title"] = "Login Page"; }
+
+<div style="margin: auto; max-width: 50%; min-width: 50%; padding-top: 2%;">
+    <div class="login-box">
+
+        <div class="login-title">
+            Login
+        </div>
+
+        <div class="login-form">
+            <div class="login-form">
+
+                <form asp-action="Index" method="post">
+                    <div asp-validation-summary="All" class="text-danger"></div>
+                    <div class="form-group">
+                        <label class="form-control-label">Username</label>
+                        <input type="text" class="form-control" asp-for="UserName" required>
+                        <span class="text-danger" asp-validation-for="UserName"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-control-label">Password</label>
+                        <input type="password" class="form-control" asp-for="Password" required>
+                        <span class="text-danger" asp-validation-for="Password"></span>
+                    </div>
+
+                    <div class="login-btm login-button">
+                        <button type="submit" class="btn btn-outline-primary">LOGIN</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-2"></div>
+    </div>
+
+    <link href="../Content/Template/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../Content/Template/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link rel="../Content/Template/stylesheet" type="text/css" href="plugins/cubeportfolio/css/cubeportfolio.min.css" />
+    <link href="../Content/Template/css/nivo-lightbox.css" rel="stylesheet" />
+    <link href="../Content/Template/css/nivo-lightbox-theme/default/default.css" rel="stylesheet" type="text/css" />
+    <link href="../Content/Template/css/owl.carousel.css" rel="stylesheet" media="screen" />
+    <link href="../Content/Template/css/owl.theme.css" rel="stylesheet" media="screen" />
+    <link href="../Content/Template/css/animate.css" rel="stylesheet" />
+    <link href="../Content/Template/css/style.css" rel="stylesheet" />
+    <link href="../Content/Template/css/jquery-ui.css" rel="stylesheet" />
+
+    <!-- boxed bg -->
+
+    <link id="bodybg" href="../Content/Template/bodybg/bg1.css" rel="stylesheet" type="text/css" />
+
+    <!-- template skin -->
+    <link id="t-colors" href="../Content/Template/color/default.css" rel="stylesheet" />
+
+    <style>
+        .login-form {
+            font-size: 10px;
+            color: #FFFFFF;
+            font-weight: bold;
+            background-color: #31708f;
+            padding-left: 2em;
+            padding-right: 2em;
+            padding-top: 2em;
+            padding-bottom: 2em;
+        }
+
+       {
+            font-size: 10px;
+            color: #000000;
+            font-weight: bold;
+            background-color: #31708f;
+        }
+
+
+        .login-form:hover {
+            color: blue;
+        }
+    </style>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Create three equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 30.33%;
+            padding: 10px;
+            /*  height: 30px;*/ /* Should be removed. Only for demonstration */
+        }
+
+
+        /* modal popup styles */
+        .modal {
+            color: darkslategrey;
+            text-decoration: solid;
+            font-weight: bold;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .close-btn {
+            color: dimgrey;
+        }
+
+        .login-form:hover {
+            color: darkslategrey;
+        }
+
+        .mobody {
+            text-align: center;
+        }
+
+        .modetail {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: bold;
+            background: darkslategrey;
+            position: absolute;
+            top: 5px;
+            color: white;
+            right: 400px;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
